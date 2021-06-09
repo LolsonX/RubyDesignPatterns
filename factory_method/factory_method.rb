@@ -1,0 +1,6 @@
+require_relative "logistic"
+require_relative "road_logistic"
+require_relative "sea_logistic"
+require_relative "transport"
+require_relative "ship"
+require_relative "truck"

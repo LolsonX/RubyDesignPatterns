@@ -2,9 +2,9 @@
 
 source "https://rubygems.org"
 
-git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
-
-gem "standardrb", "~> 1.0"
 
 gem "rspec", "~> 3.10"
+
+gem "standard", "~> 1.1", group: [:development, :test]

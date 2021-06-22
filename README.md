@@ -4,4 +4,4 @@ This repository contains my trials to implement Design Patterns in Ruby, basing 
 
 ## List of implemented patterns:
 * FactoryMethod
-* Builder (WIP)
+* Builder, including Director

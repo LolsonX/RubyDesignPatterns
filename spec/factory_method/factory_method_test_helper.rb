@@ -1,4 +1,5 @@
 require "rspec"
+require "./interface"
 require "./factory_method/factory_method"
 
 class TransportSubClassNI < FactoryMethod::Transport

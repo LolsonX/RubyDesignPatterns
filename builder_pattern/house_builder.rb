@@ -1,43 +1,35 @@
 module BuilderPattern
   class HouseBuilder
-    attr_reader :elements
-
     def initialize
-      reset
+      @house = House.new
     end
 
-    def build_room(room:)
-      elements[:walls] << room
+    def basement(basement)
+      house.basement = basement
+      self
     end
 
-    def build_doors(material:)
-      elements[:doors] << material
+    def structure(structure)
+      house.structure = structure
+      self
     end
 
-    def build_window(material:)
-      elements[:windows] << material
+    def interior(interior)
+      house.interior = interior
+      self
     end
 
-    def build_roof(shape:)
-      elements[:roof] = shape
-    end
-
-    def build_garage(presence:)
-      elements[:garage] = presence
-    end
-
-    def reset
-      @elements = {
-        rooms: [],
-        doors: [],
-        windows: [],
-        roof: "two-sided",
-        garage: "one-car"
-      }
+    def roof(roof)
+      house.roof = roof
+      self
     end
 
     def build
-      House.new(**elements)
+      house
     end
+
+    private
+
+    attr_reader :house
   end
 end
